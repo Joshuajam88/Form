@@ -1,0 +1,88 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   /* background: rgb(192, 198, 204); */
+}
+body{
+    background-color: grey;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 8px 0 8px 16px;
+}
+li a:hover{
+    color: rgb(169, 196, 214);
+}
+
+
+input{
+    width: 250px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    /* line-height: 50px; */
+}
+
+button{
+    width: 100px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+button:hover, input:hover{
+    color: black;
+    background: rgb(252, 253, 255);
+    opacity: 20px;
+    transition-duration: 1s;
+}
+
+input:hover{
+    border: 1px solid rgb(103, 103, 233);
+    background: rgb(251, 254, 255);
+    outline: none;
+}
+
+
+img{
+    width: 400px;
+    border-radius: 5px;
+    /* padding: 0 0 0 50px; */
+}
+.form{
+    display: inline-block;
+    max-width: 300px;
+    align-items: center;
+    line-height: 35px;
+}
+
+@media only screen and (max-width: 750px) {
+    #demo{
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 50px 0 0 0;
+        overflow-x: hidden;
+    }
+    img{
+        text-align: center;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    input, button{
+        margin: 0 0 0 35px;
+    }
+}
