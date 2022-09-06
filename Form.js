@@ -45,41 +45,68 @@ document.getElementById('Submit').addEventListener('click', function submitForm(
             return false
         }
         }
+
     });
 
 
-    // Consumption of Bible API to display of the website per seconds interval
-var data = JSON.stringify(false);
+    // var button = document.createElement('button');
+    // button.innerHTML = "Google &#x92;"
 
-var xhr = new XMLHttpRequest();
+    // var body = document.getElementsByTagName("body")[0];
+    // body.appendChild(button)
+     
+    // button.addEventListener("click", function(){
+    //     alert("did something")
+    // })
+
+
+    // Consumption of Bible API to display of the website per seconds interval
+// var data = JSON.stringify(false);
+
+// var xhr = new XMLHttpRequest();
+// xhr.withCredentials = true;
+// xhr.addEventListener("readystatechange", function(){
+//     if(this.readyState === this.DONE){
+//         console.log(this.responseText);
+//     }
+// });
+
+// xhr.open("Get", "http://www.restfulwebservices.net/rest/BibleASVService.svc?wsdl");
+// xhr.setRequestHeader("api-key", "api-key");
+// xhr.send(data);
+
+
+
+
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': 'b0e9e8f804msh8472f127fdb9afbp1336b7jsnebde78b5143c',
+// 		'X-RapidAPI-Host': 'kjv-bible.p.rapidapi.com'
+// 	}
+// };
+
+// fetch('https://kjv-bible.p.rapidapi.com/randomVerse', options)
+// 	.then(response => response.json())
+// 	.then(response => console.log(response))
+// 	.catch(err => console.error(err));
+
+
+
+
+const data = null;
+
+const xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
-xhr.addEventListener("readystatechange", function(){
-    if(this.readyState === this.DONE){
-        console.log(this.responseText);
-    }
+
+xhr.addEventListener("readystatechange", function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
 });
 
-xhr.open("Get", "https://api.scripture.api.bible/v1/bibles/biblesId/books/bookId/chapters/chaptersId/verses");
-xhr.setRequestHeader("api-key", "api-key");
+xhr.open("GET", "https://kjv-bible.p.rapidapi.com/randomVerse");
+xhr.setRequestHeader("X-RapidAPI-Key", "b0e9e8f804msh8472f127fdb9afbp1336b7jsnebde78b5143c");
+xhr.setRequestHeader("X-RapidAPI-Host", "kjv-bible.p.rapidapi.com");
+
 xhr.send(data);
-
-
-    // Creating the button element
-    var button = document.createElement('button');
-    button.innerHTML = "Google &#x92;"
-
-    // Append somewhere
-    var body = document.getElementsByTagName("body")[0];
-    body.appendChild(button)
-
-    // Adding event handler 
-    button.addEventListener("click", function(){
-        alert("did something")
-    })
-
-
-
-    // let ele = document.createElement('p');
-    // let text = document.createTextNode('I give you all the Glory');
-    // element.appendChild(text);
-    // document.getElementById('demo').appendChild(ele);
